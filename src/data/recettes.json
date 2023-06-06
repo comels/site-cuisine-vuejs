@@ -1,0 +1,270 @@
+[
+    {
+        "id": 1,
+        "name": "Apéros",
+        "recettes": [
+            {
+                "id": 1,
+                "name": "Morethon",
+                "ingredients": [
+                    "Fromage Frais",
+                    "Thon",
+                    "Citrons",
+                    "Ciboulette"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Entrées",
+        "recettes": [
+            {
+                "id": 1,
+                "name": "Concombre Fjord",
+                "ingredients": [
+                    "Fjord",
+                    "Concombre",
+                    "Citron",
+                    "Persil",
+                    "Sel",
+                    "Poivre"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Plats",
+        "recettes": [
+            {
+                "id": 1,
+                "name": "Parmiggiana",
+                "ingredients": [
+                    "Aubergines",
+                    "Mozza",
+                    "Huile",
+                    "Sucre"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Desserts",
+        "recettes": [
+            {
+                "id": 1,
+                "name": "Tarte au Pommes",
+                "ingredients": [
+                    "Pâte brisée",
+                    "Pommes",
+                    "Sucre",
+                    "Cannelle"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Panacotta",
+                "count": 6,
+                "ingredients": [
+                    {
+                        "name": "Crème Fleurette",
+                        "quantity": 50,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sucre",
+                        "quantity": 50,
+                        "measure": "g"
+                    },
+                    {
+                        "name": "Gélatines",
+                        "quantity": 2,
+                        "measure": "Feuilles"
+                    }
+                ],
+                "instructions": [
+                    "Faites tremper les feuilles de gélatines.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Cocktails",
+        "recettes": [
+            {
+                "id": 1,
+                "name": "Negroni",
+                "image": "negroni.jpg",
+                "ingredients": [
+                    "Gin",
+                    "Orange",
+                    "Campari",
+                    "Martini"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Spritz",
+                "ingredients": [
+                    "Apérol",
+                    "Orange",
+                    "Prosecco",
+                    "Perrier"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Gin Tonic",
+                "ingredients": [
+                    "Gin",
+                    "Tonic",
+                    "Citron",
+                    "Poivre"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Ricard",
+                "ingredients": [
+                    "Ricard",
+                    "Eau",
+                    "Glacons",
+                    "Poivre"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Suze Tonic",
+                "ingredients": [
+                    "Suze",
+                    "Tonic",
+                    "Glacons"
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Margarita",
+                "count": 1,
+                "ingredients": [
+                    {
+                        "name": "Tequila",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Cointreau",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Jus de citrons verts",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sel"
+                    }
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
+            }
+        ]
+    }
+]
