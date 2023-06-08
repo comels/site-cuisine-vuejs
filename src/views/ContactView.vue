@@ -12,13 +12,7 @@
         Got a technical issue? Want to send feedback about a beta feature? Need
         details about our Business plan? Let us know.
       </p>
-      <form
-        accept-charset="UTF-8"
-        action="https://www.formbackend.com/f/bf7e7309978cdf15"
-        method="POST"
-        class="space-y-8"
-        netlify
-      >
+      <form action="" class="space-y-8" netlify>
         <div>
           <input
             type="text"
