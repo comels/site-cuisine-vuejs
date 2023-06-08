@@ -12,7 +12,7 @@
         Got a technical issue? Want to send feedback about a beta feature? Need
         details about our Business plan? Let us know.
       </p>
-      <form class="space-y-8" action="" netlify>
+      <form class="space-y-8" action="" method="POST" netlify>
         <div>
           <input
             type="text"
