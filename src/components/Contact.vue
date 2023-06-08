@@ -12,7 +12,7 @@
         Got a technical issue? Want to send feedback about a beta feature? Need
         details about our Business plan? Let us know.
       </p>
-      <form name="contact" method="POST" netlify>
+      <form name="contact" netlify>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
