@@ -83,6 +83,7 @@
             {
                 "id": 1,
                 "name": "Tarte au Pommes",
+                "count": 6,
                 "ingredients": [
                     "Pâte brisée",
                     "Pommes",
@@ -90,7 +91,7 @@
                     "Cannelle"
                 ],
                 "instructions": [
-                    "Préchauffez le four à 180°C.",
+                    "Disposez les tranches de pommes sur la pâte. Épluchez et coupez les pommes en tranches. Laissez refroidir avant de servir.",
                     "Étalez la pâte dans un moule à tarte.",
                     "Épluchez et coupez les pommes en tranches.",
                     "Disposez les tranches de pommes sur la pâte.",
@@ -101,7 +102,7 @@
             },
             {
                 "id": 2,
-                "name": "Panacotta",
+                "name": "Panna Cotta",
                 "count": 6,
                 "ingredients": [
                     {
@@ -115,7 +116,7 @@
                         "measure": "g"
                     },
                     {
-                        "name": "Gélatines",
+                        "name": "de Gélatines",
                         "quantity": 2,
                         "measure": "Feuilles"
                     }

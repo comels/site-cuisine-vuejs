@@ -31,7 +31,7 @@ const decreaseCount = () => {
 
 <template>
   <div>
-    <h2 class="text-center text-3xl tracking-wider font-roboto mb-10">
+    <h2 class="text-center text-4xl tracking-wider font-titre mb-10">
       {{ recette.name.toUpperCase() }}
     </h2>
   </div>
@@ -104,15 +104,15 @@ const decreaseCount = () => {
         </li>
       </ul>
       <h4 class="text-2xl font-normal mb-5">Instructions :</h4>
-      <ol class="list-decimal text-lg pl-6">
+      <ol class="list-decimal mb-10 max-w-sm text-lg pl-6">
         <li class="mb-2" v-for="step in recette.instructions" :key="step">
           {{ step }}
         </li>
       </ol>
     </div>
     <img
-      class="w-9/12 ml-10 mb-10 max-w-lg h-full object-contain"
-      src="https://i.pinimg.com/564x/be/be/fd/bebefddbd2207cf2295ac59b97ed54f3.jpg"
+      class="w-9/12 mx-10 mb-10 max-w-lg h-full object-contain"
+      src="https://i.pinimg.com/564x/ba/83/f0/ba83f0f2625ad80976aece281b8a5b65.jpg"
       :alt="recette.name"
     />
   </div>

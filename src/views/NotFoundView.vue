@@ -20,7 +20,7 @@ import { RouterLink } from "vue-router";
             type="button"
             class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 font-titre focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-2xl px-5 py-2.5 mr-2 mb-2"
           >
-            Acceuil
+            Accueuil
           </button>
         </RouterLink>
       </div>
