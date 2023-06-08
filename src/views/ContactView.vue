@@ -17,6 +17,7 @@
         action="https://www.formbackend.com/f/bf7e7309978cdf15"
         method="POST"
         class="space-y-8"
+        netlify
       >
         <div>
           <input
