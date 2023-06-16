@@ -1,5 +1,5 @@
 <script setup>
-import FormRecette from "../components/formRecette.vue";
+import formRecette from "../components/formRecette.vue";
 
 /* const cards = [
   { name: "Apéros", color: "bg-yellow-400", route: "Aperos" },
@@ -12,7 +12,7 @@ import FormRecette from "../components/formRecette.vue";
 
 <template>
   <div class="bg-stone-100 w-full h-full">
-    <FormRecette />
+    <formRecette />
   </div>
 </template>
 
