@@ -2,8 +2,8 @@
 import recettesData from "../data/recettes.json";
 import Apercu from "../components/Apercu.vue";
 
-const allRecettes = recettesData.find((r) => r.name === "Desserts");
-const type = "Desserts";
+const allRecettes = recettesData.find((r) => r.name === "desserts");
+const type = "desserts";
 </script>
 
 <template>

@@ -30,16 +30,14 @@ const decreaseCount = () => {
 </script>
 
 <template>
-  <div>
-    <h2 class="text-center text-4xl tracking-wider font-titre mb-10">
-      {{ recette.name.toUpperCase() }}
-    </h2>
-  </div>
+  <h2 class="text-center text-2xl font-montserrat font-semibold my-20">
+    {{ recette.name.toUpperCase() }}
+  </h2>
   <div
-    class="mt-5 items-center flex-wrap justify-center font-roboto font-light flex mx-auto overflow-hidden"
+    class="mt-5 flex-wrap justify-center font-roboto font-light flex mx-auto overflow-hidden"
   >
     <div class="p-5">
-      <h4 class="text-2xl font-normal">Ingrédients :</h4>
+      <h4 class="text-xl font-montserrat font-semibold">INGRÉDIENTS :</h4>
       <div class="mb-9 mt-3 flex items-center">
         <button
           @click="decreaseCount"
@@ -103,7 +101,7 @@ const decreaseCount = () => {
           </div>
         </li>
       </ul>
-      <h4 class="text-2xl font-normal mb-5">Instructions :</h4>
+      <h4 class="text-xl font-montserrat font-semibold mb-5">INSTRUCTIONS :</h4>
       <ol class="list-decimal mb-10 max-w-sm text-lg pl-6">
         <li class="mb-2" v-for="step in recette.instructions" :key="step">
           {{ step }}
@@ -117,8 +115,3 @@ const decreaseCount = () => {
     />
   </div>
 </template>
-
-<style scoped>
-/* Ajoutez ic
-i des styles personnalisés si nécessaire */
-</style>

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Apéros",
+        "name": "aperos",
         "recettes": [
             {
                 "id": 1,
@@ -26,7 +26,7 @@
     },
     {
         "id": 2,
-        "name": "Entrées",
+        "name": "entrees",
         "recettes": [
             {
                 "id": 1,
@@ -53,7 +53,7 @@
     },
     {
         "id": 3,
-        "name": "Plats",
+        "name": "plats",
         "recettes": [
             {
                 "id": 1,
@@ -78,7 +78,7 @@
     },
     {
         "id": 4,
-        "name": "Desserts",
+        "name": "desserts",
         "recettes": [
             {
                 "id": 1,
@@ -135,36 +135,65 @@
     },
     {
         "id": 5,
-        "name": "Cocktails",
+        "name": "cocktails",
         "recettes": [
             {
                 "id": 1,
                 "name": "Negroni",
-                "image": "negroni.jpg",
+                "image": "https://i.pinimg.com/474x/f5/76/50/f576502d427108846c5d3233bd208dc9.jpg",
+                "count": 1,
                 "ingredients": [
-                    "Gin",
-                    "Orange",
-                    "Campari",
-                    "Martini"
+                    {
+                        "name": "Gin",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Campari",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Vermouth Rouge",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Zeste d'orange",
+                        "quantity": 1,
+                        "measure": ""
+                    }
                 ],
                 "instructions": [
-                    "Préchauffez le four à 180°C.",
-                    "Étalez la pâte dans un moule à tarte.",
-                    "Épluchez et coupez les pommes en tranches.",
-                    "Disposez les tranches de pommes sur la pâte.",
-                    "Saupoudrez de sucre et de cannelle.",
-                    "Enfournez pendant 30 minutes.",
-                    "Laissez refroidir avant de servir."
+                    "Mettre le gin, le Campari et le vermouth dans votre verre.",
+                    "Ajouter de la glace et remuer doucement.",
+                    "Garnir avec un zeste d’orange."
                 ]
             },
             {
                 "id": 2,
                 "name": "Spritz",
+                "image": "https://i.pinimg.com/564x/64/5a/c8/645ac8c33f2d43c4f5ea05b3923b4a5c.jpg",
+                "count": 1,
                 "ingredients": [
-                    "Apérol",
-                    "Orange",
-                    "Prosecco",
-                    "Perrier"
+                    {
+                        "name": "Tequila",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Cointreau",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Jus de citrons verts",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sel"
+                    }
                 ],
                 "instructions": [
                     "Préchauffez le four à 180°C.",
@@ -179,11 +208,27 @@
             {
                 "id": 3,
                 "name": "Gin Tonic",
+                "image": "https://i.pinimg.com/474x/41/3f/00/413f0042feebee6048ad74e324f3155c.jpg",
+                "count": 1,
                 "ingredients": [
-                    "Gin",
-                    "Tonic",
-                    "Citron",
-                    "Poivre"
+                    {
+                        "name": "Tequila",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Cointreau",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Jus de citrons verts",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sel"
+                    }
                 ],
                 "instructions": [
                     "Préchauffez le four à 180°C.",
@@ -198,11 +243,27 @@
             {
                 "id": 4,
                 "name": "Ricard",
+                "image": "https://i.pinimg.com/474x/f5/76/50/f576502d427108846c5d3233bd208dc9.jpg",
+                "count": 1,
                 "ingredients": [
-                    "Ricard",
-                    "Eau",
-                    "Glacons",
-                    "Poivre"
+                    {
+                        "name": "Tequila",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Cointreau",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Jus de citrons verts",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sel"
+                    }
                 ],
                 "instructions": [
                     "Préchauffez le four à 180°C.",
@@ -217,10 +278,27 @@
             {
                 "id": 5,
                 "name": "Suze Tonic",
+                "image": "https://i.pinimg.com/474x/f5/76/50/f576502d427108846c5d3233bd208dc9.jpg",
+                "count": 1,
                 "ingredients": [
-                    "Suze",
-                    "Tonic",
-                    "Glacons"
+                    {
+                        "name": "Tequila",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Cointreau",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Jus de citrons verts",
+                        "quantity": 3,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Sel"
+                    }
                 ],
                 "instructions": [
                     "Préchauffez le four à 180°C.",
@@ -235,6 +313,7 @@
             {
                 "id": 5,
                 "name": "Margarita",
+                "image": "https://i.pinimg.com/474x/f5/76/50/f576502d427108846c5d3233bd208dc9.jpg",
                 "count": 1,
                 "ingredients": [
                     {

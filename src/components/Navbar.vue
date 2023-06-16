@@ -10,17 +10,18 @@ const isMenuOpen = ref(false);
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <img class="h-16 w-16 mr-1" src="../assets/logo.png" alt="" />
-          <router-link to="/" class="text-black text-5xl font-bold"
+          <router-link
+            to="/"
+            class="tracking-wider font-titre text-black text-5xl font-bold"
             >Almeko</router-link
           >
         </div>
-
         <!-- Menu Burger pour mobile -->
         <div class="-mr-2 flex items-center md:hidden">
           <button
             @click="isMenuOpen = !isMenuOpen"
             type="button"
-            class="text-black hover:text-yellow-400 focus:outline-none focus:ring-white"
+            class="text-black focus:outline-none focus:ring-white"
           >
             <span class="sr-only">Toggle menu</span>
             <svg
@@ -39,84 +40,76 @@ const isMenuOpen = ref(false);
             </svg>
           </button>
         </div>
-
         <!-- Liens de navigation -->
         <div class="hidden md:flex md:items-center md:space-x-4">
           <router-link
             to="/aperos"
-            class="text-black hover:text-yellow-400 px-3 py-2 rounded-md text-2xl font-medium"
-            >Apéros</router-link
+            class="text-black font-montserrat font-light hover:font-semibold px-2 py-2 text-sm"
+            >APÉROS</router-link
           >
           <router-link
             to="/entrees"
-            class="text-black hover:text-yellow-400 px-3 py-2 rounded-md text-2xl font-medium"
-            >Entrées</router-link
+            class="text-black font-montserrat font-light hover:font-semibold px-2 py-2 text-sm"
+            >ENTRÉES</router-link
           >
           <router-link
             to="/plats"
-            class="text-black hover:text-yellow-400 px-3 py-2 rounded-md text-2xl font-medium"
-            >Plats</router-link
+            class="text-black font-montserrat font-light hover:font-semibold px-2 py-2 text-sm"
+            >PLATS</router-link
           >
           <router-link
             to="/desserts"
-            class="text-black hover:text-yellow-400 px-3 py-2 rounded-md text-2xl font-medium"
-            >Desserts</router-link
+            class="text-black font-montserrat font-light hover:font-semibold px-2 py-2 text-sm"
+            >DESSERTS</router-link
           >
           <router-link
             to="/cocktails"
-            class="text-black hover:text-yellow-400 px-3 py-2 rounded-md text-2xl font-medium"
-            >Cocktails</router-link
+            class="text-black font-montserrat font-light hover:font-semibold px-2 py-2 text-sm"
+            >COCKTAILS</router-link
           >
         </div>
       </div>
     </div>
-
     <!-- Menu déroulant mobile -->
     <div v-show="isMenuOpen" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <router-link
           to="/"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Accueil</router-link
+          >ACCUEUIL</router-link
         >
         <router-link
           to="/aperos"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Apéros</router-link
+          >APÉROS</router-link
         >
         <router-link
           to="/entrees"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Entrées</router-link
+          >ENTRÉES</router-link
         >
         <router-link
           to="/plats"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Plats</router-link
+          >PLATS</router-link
         >
         <router-link
           to="/desserts"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Desserts</router-link
+          >DESSERTS</router-link
         >
         <router-link
           to="/cocktails"
-          class="text-black hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+          class="text-black font-montserrat font-light hover:font-semibold block px-3 py-2"
           @click="isMenuOpen = !isMenuOpen"
-          >Cocktails</router-link
+          >COCKTAILS</router-link
         >
       </div>
     </div>
   </nav>
 </template>
-
-<style lang="scss" scoped>
-* {
-  font-family: "Bebas Neue", sans-serif;
-}
-</style>

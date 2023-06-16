@@ -13,6 +13,7 @@ module.exports = {
         courrier: ["Special Elite", "cursive"],
         abel: ["Abel", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
