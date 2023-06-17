@@ -4,7 +4,7 @@ const isMenuOpen = ref(false);
 </script>
 
 <template>
-  <nav class="bg-white mb-8 my-7">
+  <nav class="bg-white my-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->

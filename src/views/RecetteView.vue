@@ -1,14 +1,24 @@
 <script setup>
 import { useRoute } from "vue-router";
-import recettes from "../data/recettes.json";
 import { ref } from "vue";
+import axios from "axios";
 
 const route = useRoute();
-const recetteType = route.params.type;
 const recetteName = route.params.name;
 
-const type = recettes.find((t) => t.name === recetteType);
-const recette = type.recettes.find((r) => r.name === recetteName);
+const getRecetteData = async () => {
+  try {
+    const allRecettes = await axios.get("http://localhost:5000/recette");
+
+    return allRecettes;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const allRecettes = await getRecetteData();
+
+const recette = allRecettes.data.find((r) => r.name === recetteName);
 
 const count = ref(recette.count);
 
@@ -82,7 +92,7 @@ const decreaseCount = () => {
       <ul class="list-none text-lg mb-9">
         <li
           class="mb-2"
-          v-for="ingredient in recette.ingredients"
+          v-for="ingredient in recette.ingredient"
           :key="ingredient"
         >
           <div v-if="ingredient.quantity">
@@ -103,14 +113,14 @@ const decreaseCount = () => {
       </ul>
       <h4 class="text-xl font-montserrat font-semibold mb-5">INSTRUCTIONS :</h4>
       <ol class="list-decimal mb-10 max-w-sm text-lg pl-6">
-        <li class="mb-2" v-for="step in recette.instructions" :key="step">
-          {{ step }}
+        <li class="mb-2" v-for="step in recette.instruction" :key="step">
+          {{ step.instruction }}
         </li>
       </ol>
     </div>
     <img
-      class="w-9/12 mx-10 mb-10 max-w-lg h-full object-contain"
-      src="https://i.pinimg.com/564x/ba/83/f0/ba83f0f2625ad80976aece281b8a5b65.jpg"
+      class="w-[30%] mx-10 mb-10 max-w-lg rounded-lg h-full object-contain"
+      :src="recette.image"
       :alt="recette.name"
     />
   </div>

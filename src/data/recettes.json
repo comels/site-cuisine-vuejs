@@ -344,6 +344,38 @@
                     "Enfournez pendant 30 minutes.",
                     "Laissez refroidir avant de servir."
                 ]
+            },
+            {
+                "id": 6,
+                "name": "Spritz",
+                "image": "https://i.pinimg.com/474x/f5/76/50/f576502d427108846c5d3233bd208dc9.jpg",
+                "count": 1,
+                "ingredients": [
+                    {
+                        "name": "Apérol",
+                        "quantity": 5,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Prosecco",
+                        "quantity": 2,
+                        "measure": "cl"
+                    },
+                    {
+                        "name": "Perrier",
+                        "quantity": 3,
+                        "measure": "cl"
+                    }
+                ],
+                "instructions": [
+                    "Préchauffez le four à 180°C.",
+                    "Étalez la pâte dans un moule à tarte.",
+                    "Épluchez et coupez les pommes en tranches.",
+                    "Disposez les tranches de pommes sur la pâte.",
+                    "Saupoudrez de sucre et de cannelle.",
+                    "Enfournez pendant 30 minutes.",
+                    "Laissez refroidir avant de servir."
+                ]
             }
         ]
     }

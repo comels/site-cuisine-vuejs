@@ -1,13 +1,23 @@
 <script setup>
-import recettesData from "../data/recettes.json";
 import Apercu from "../components/Apercu.vue";
+import axios from "axios";
 
-const allRecettes = recettesData.find((r) => r.name === "aperos");
 const type = "aperos";
+
+const getRecetteData = async () => {
+  try {
+    const allRecettes = await axios.get("http://localhost:5000/recette");
+
+    return allRecettes;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const allRecettes = await getRecetteData();
+const selectedRecette = allRecettes.data.filter((r) => r.type === "aperos");
 </script>
 
 <template>
-  <Apercu :allRecettes="allRecettes" :type="type" />
+  <Apercu :type="type" :allRecettes="selectedRecette" />
 </template>
-
-<style lang="scss" scoped></style>

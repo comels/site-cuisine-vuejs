@@ -1,12 +1,18 @@
 <script setup>
 import { ref, watch } from "vue";
 import { RouterLink } from "vue-router";
+import FormRecette from "./FormRecette.vue";
 
 const searchResult = ref("");
-const selectedRecette = ref(props.allRecettes.recettes);
+const selectedRecette = ref(props.allRecettes);
+const show = ref(false);
+
+const showAddForm = () => {
+  show.value = !show.value;
+};
 
 watch(searchResult, () => {
-  selectedRecette.value = props.allRecettes.recettes.filter((recette) =>
+  selectedRecette.value = props.allRecettes.filter((recette) =>
     recette.name.toLowerCase().includes(searchResult.value.toLowerCase())
   );
 });
@@ -24,33 +30,40 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="bg-stone-100 w-screen h-screen">
-    <!-- input search -->
-    <div class="m-auto py-10 w-96">
-      <div class="relative">
-        <div class="absolute left-0 inset-y-0 pl-3 flex items-center">
-          <svg
-            class="fill-current h-6 w-6 text-stone-300"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"
-            />
-          </svg>
-        </div>
+  <div class="mb-12">
+    <div class="flex gap-4 mr-28 my-7 justify-end">
+      <!-- input search -->
+      <div class="border-b border-stone-300">
         <input
+          v-if="!show"
           v-model="searchResult"
-          class="w-full border-none text-stone-700 capitalize placeholder-stone-300 rounded-lg pl-12 pr-4 py-2 focus-within:shadow-lg focus:ring-transparent focus:border-transparent"
+          class="cursor-pointer pl-0 appearance-none bg-transparent border-none text-stone-700 placeholder-stone-400 rounded-md py-2 focus:ring-transparent focus:border-stone-500"
           type="text"
-          placeholder="Search..."
+          placeholder="Recherche..."
         />
       </div>
+      <!-- button ajouter une recette -->
+      <button
+        v-if="!show"
+        class="font-roboto py-2 px-6 font-normal text-white bg-stone-400 hover:bg-stone-500 rounded-md text-2xl cursor-pointer transition duration-500 ease-in-out"
+        @click="showAddForm"
+      >
+        +
+      </button>
+      <button
+        v-if="show"
+        class="font-roboto py-2 px-6 font-normal text-white bg-stone-400 hover:bg-stone-500 rounded-md text-2xl cursor-pointer transition duration-500 ease-in-out"
+        @click="showAddForm"
+      >
+        x
+      </button>
     </div>
+    <FormRecette v-if="show" @close-form="showAddForm" />
     <!-- all recettes -->
     <div class="md:mx-20 mx-10 grid grid-cols-2 md:grid-cols-4 gap-3">
       <RouterLink
         v-for="recette in selectedRecette"
+        :allRecettes="props.allRecettes"
         :key="type + recette.id"
         :to="`/recettes/${type}/${recette.name}`"
       >

@@ -5,7 +5,6 @@ import InstructionCreator from "./InstructionCreator.vue";
 import IngredientItem from "./IngredientItem.vue";
 import InstructionItem from "./InstructionItem.vue";
 import { uid } from "uid";
-import fs from "fs";
 import axios from "axios";
 
 const ingredientList = ref([]);
@@ -13,8 +12,10 @@ const instructionList = ref([]);
 const urlRecette = ref("");
 const recetteName = ref("");
 const numberPers = ref("");
+const selectedType = ref("");
 
 const recette = reactive({
+  type: selectedType,
   name: recetteName,
   count: numberPers,
   ingredient: ingredientList,
@@ -22,21 +23,23 @@ const recette = reactive({
   image: urlRecette,
 });
 
-const sendData = async () => {
-  try {
-    const response = await axios.post("http://localhost:5000/recette", recette);
+const emit = defineEmits(["close-form"]);
 
-    // Gérez la réponse de la requête ici
-    console.log(response.data);
+const addRecette = async () => {
+  try {
+    await axios.post("http://localhost:5000/recette", recette);
+
+    (recette.type = ""),
+      (recette.name = ""),
+      (recette.count = ""),
+      (recette.ingredient = []),
+      (recette.instruction = []),
+      (recette.image = "");
   } catch (error) {
     // Gérez les erreurs de la requête ici
-    console.error(error);
+    console.log(error);
   }
-};
-
-/* await axios.post("http://localhost:5000/recette", recette); */
-const createRecette = async () => {
-  console.log(recette);
+  emit("close-form");
 };
 
 const createInstruction = (instruction) => {
@@ -78,65 +81,68 @@ const deleteIngredient = (ingredientId) => {
 </script>
 
 <template>
-  <main class="flex flex-col max-w-lg w-full my-0 mx-auto py-10">
-    <!-- Input Nom de la recette -->
-
-    <input
-      class="border-none w-full mb-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
-      v-model="recetteName"
-      type="text"
-      placeholder="Nom de la recette"
-    />
-
-    <!-- Input Nombre de personne -->
-
-    <input
-      class="border-none w-full mb-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
-      v-model="numberPers"
-      type="number"
-      placeholder="Recette pour combien de personnes ?"
-    />
-
-    <!-- Input Ingrédients -->
-
-    <IngredientCreator @create-ingredient="createIngredient" />
-    <ul v-if="ingredientList.length > 0" class="flex flex-col mt-6 gap-3">
-      <IngredientItem
-        v-for="(ingredient, index) in ingredientList"
-        :ingredient="ingredient"
-        :index="index"
-        @delete-ingredient="deleteIngredient"
+  <main class="bg-stone-100">
+    <div class="flex flex-col max-w-lg w-full mb-20 mx-auto py-10">
+      <!-- Input Nom de la recette -->
+      <input
+        class="border-none w-full mb-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
+        v-model="recetteName"
+        type="text"
+        placeholder="Nom de la recette"
       />
-    </ul>
-
-    <!-- Input Instructions -->
-
-    <InstructionCreator @create-instruction="createInstruction" />
-    <ul v-if="instructionList.length > 0" class="flex flex-col mt-6 gap-3">
-      <InstructionItem
-        v-for="(instruction, index) in instructionList"
-        :instruction="instruction"
-        :index="index"
-        @delete-instruction="deleteInstruction"
-        @edit-instruction="toggleEditInstruction"
-        @update-instruction="updateInstruction"
+      <select
+        class="border-none w-full mb-10 py-4 text-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
+        v-model="selectedType"
+      >
+        <option value="" disabled selected>Choisir une catégorie</option>
+        <option value="aperos">Apéros</option>
+        <option value="entrees">Entrées</option>
+        <option value="plats">Plats</option>
+        <option value="desserts">Desserts</option>
+        <option value="cocktails">Cocktails</option>
+      </select>
+      <!-- Input Nombre de personne -->
+      <input
+        class="border-none w-full mb-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
+        v-model="numberPers"
+        type="number"
+        placeholder="Recette pour combien de personnes ?"
       />
-    </ul>
-
-    <!-- Input URL -->
-
-    <input
-      class="border-none w-full mt-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
-      v-model="urlRecette"
-      type="url"
-      placeholder="URL de la photo de la recette"
-    />
-    <button
-      class="font-roboto mt-10 py-4 px-6 font-semibold text-white bg-stone-400 hover:bg-stone-500 rounded-md text-lg cursor-pointer transition duration-500 ease-in-out"
-      @click="sendData"
-    >
-      Ajouter la recette
-    </button>
-    {{ recette }}
+      <!-- Input Ingrédients -->
+      <IngredientCreator @create-ingredient="createIngredient" />
+      <ul v-if="ingredientList.length > 0" class="flex flex-col mt-6 gap-3">
+        <IngredientItem
+          v-for="(ingredient, index) in ingredientList"
+          :ingredient="ingredient"
+          :index="index"
+          @delete-ingredient="deleteIngredient"
+        />
+      </ul>
+      <!-- Input Instructions -->
+      <InstructionCreator @create-instruction="createInstruction" />
+      <ul v-if="instructionList.length > 0" class="flex flex-col mt-6 gap-3">
+        <InstructionItem
+          v-for="(instruction, index) in instructionList"
+          :instruction="instruction"
+          :index="index"
+          @delete-instruction="deleteInstruction"
+          @edit-instruction="toggleEditInstruction"
+          @update-instruction="updateInstruction"
+        />
+      </ul>
+      <!-- Input URL -->
+      <input
+        class="border-none w-full mt-10 py-4 placeholder-stone-500 focus:border-transparent cursor-pointer focus:ring-transparent focus:shadow-md rounded-md"
+        v-model="urlRecette"
+        type="url"
+        placeholder="URL de la photo de la recette"
+      />
+      <button
+        class="font-roboto mt-10 py-4 px-4 max-w-xs font-semibold text-white bg-stone-400 hover:bg-stone-500 rounded-md text-lg cursor-pointer transition duration-500 ease-in-out"
+        @click="addRecette"
+      >
+        Ajouter la recette
+      </button>
+    </div>
   </main>
 </template>

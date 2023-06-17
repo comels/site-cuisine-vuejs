@@ -1,14 +1,23 @@
 <script setup>
 import { RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:5000/";
 </script>
 
 <template>
   <header>
     <Navbar />
   </header>
-
-  <RouterView />
+  <div>
+    <Suspense>
+      <RouterView />
+      <template #fallback>
+        <p>Loading...</p>
+      </template>
+    </Suspense>
+  </div>
 </template>
 
 <style lang="scss" scoped>
